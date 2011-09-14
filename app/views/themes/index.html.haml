@@ -1,0 +1,10 @@
+%h1="Список тем к фильму: " + @film.name
+
+-@themes.each do |theme|
+  =render 'themes/theme', :theme=>theme
+=paginate @themes
+
+-if @current_user && @current_user.admin?
+  =link_to "Добавить тему", new_film_theme_path
+  \|
+=link_to "Назад", film_path(@film)

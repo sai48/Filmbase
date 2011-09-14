@@ -1,0 +1,7 @@
+%h1 Editing comment
+
+= render 'form'
+
+= link_to 'Show', film_theme_comment_path(@film, @theme, @comment)
+\|
+= link_to 'Back', film_theme_comments_path(@film, @theme)

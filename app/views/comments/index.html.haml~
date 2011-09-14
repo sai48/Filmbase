@@ -1,0 +1,25 @@
+%h1 Комментарии
+
+-if @theme.image?
+  =image_tag(@theme.image.url(:medium))
+-@count = 0
+-@comments.each do |comment|
+  -@count += 1
+  =render 'comments/comment', :comment=>comment
+  =link_to "Редактировать", edit_film_theme_comment_path(@film, @theme, comment)
+  \|
+  =link_to "Удалить", [@film, @theme, comment], :confirm =>"Вы уверены?", :method => :delete
+-if !@theme.image?
+  =form_for [@film,@theme], :html=>{:multipart=>true} do |t|
+    Прикрепить изображение:
+    %br
+    =t.file_field :image
+    %br
+    =t.submit
+%br
+
+=link_to "Добавить комментарий", new_film_theme_comment_path
+\|
+=link_to "Назад", film_themes_path
+
+

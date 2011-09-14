@@ -1,0 +1,17 @@
+%h1 Listing add_user_to_groups
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @add_user_to_groups.each do |add_user_to_group|
+    %tr
+      %td= link_to 'Show', add_user_to_group
+      %td= link_to 'Edit', edit_add_user_to_group_path(add_user_to_group)
+      %td= link_to 'Destroy', add_user_to_group, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Add user to group', new_add_user_to_group_path

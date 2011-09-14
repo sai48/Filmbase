@@ -1,0 +1,16 @@
+= form_for @add_users_to_film do |f|
+  -if @add_users_to_film.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@add_users_to_film.errors.count, "error")} prohibited this add_users_to_film from being saved:"
+      %ul
+        - @add_users_to_film.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :users_id
+    = f.text_field :users_id
+  .field
+    = f.label :film_id
+    = f.text_field :film_id
+  .actions
+    = f.submit 'Save'

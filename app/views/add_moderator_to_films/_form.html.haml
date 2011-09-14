@@ -1,0 +1,10 @@
+= form_for @add_moderator_to_film do |f|
+  -if @add_moderator_to_film.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@add_moderator_to_film.errors.count, "error")} prohibited this add_moderator_to_film from being saved:"
+      %ul
+        - @add_moderator_to_film.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

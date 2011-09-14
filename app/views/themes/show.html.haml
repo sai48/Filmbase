@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @theme.name
+
+ 
+
+= link_to 'Edit', edit_film_theme_path(@theme)
+\|
+= link_to 'Back', film_themes_path

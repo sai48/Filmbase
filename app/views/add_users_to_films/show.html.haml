@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Users:
+  = @add_users_to_film.users_id
+%p
+  %b Film:
+  = @add_users_to_film.film_id
+
+= link_to 'Edit', edit_add_users_to_film_path(@add_users_to_film)
+\|
+= link_to 'Back', add_users_to_films_path

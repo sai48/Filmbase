@@ -1,0 +1,4 @@
+%h1 Участники обсуждения
+
+-@users.each do |user|
+  =user.login

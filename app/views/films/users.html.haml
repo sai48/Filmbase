@@ -1,0 +1,11 @@
+%h1 Участники обсуждения
+
+%table
+  %tr
+    %th Пользователи
+
+  -@users.each do |user|
+    %tr
+      %td=user.login
+%br
+=link_to "Назад", film_path(@film)

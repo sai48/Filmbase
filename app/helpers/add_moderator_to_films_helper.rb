@@ -1,0 +1,2 @@
+module AddModeratorToFilmsHelper
+end

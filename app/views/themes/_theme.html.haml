@@ -1,0 +1,10 @@
+.theme
+  .left=link_to image_tag('theme_thumb.png'), film_theme_comments_path(@film, theme)
+  .col
+    =link_to theme.name, film_theme_comments_path(@film, theme)
+    .low
+      =l(theme.created_at, :format=>:long)
+    .center
+      Комментариев: 
+      =theme.comments.count
+  .clear

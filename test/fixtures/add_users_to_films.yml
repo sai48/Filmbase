@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  users_id: 1
+  film_id: 1
+
+two:
+  users_id: 1
+  film_id: 1

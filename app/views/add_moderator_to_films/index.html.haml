@@ -1,0 +1,17 @@
+%h1 Listing add_moderator_to_films
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @add_moderator_to_films.each do |add_moderator_to_film|
+    %tr
+      %td= link_to 'Show', add_moderator_to_film
+      %td= link_to 'Edit', edit_add_moderator_to_film_path(add_moderator_to_film)
+      %td= link_to 'Destroy', add_moderator_to_film, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Add moderator to film', new_add_moderator_to_film_path

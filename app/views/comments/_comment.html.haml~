@@ -1,0 +1,12 @@
+.theme
+  .title
+    =l comment.created_at, :format=>:long
+    .right
+      \#
+      =@count
+  .cuser=comment.commenter
+  .cbody
+    -if comment.image?
+      =image_tag(comment.image.url, :medium)
+    =comment.body
+  .clear
